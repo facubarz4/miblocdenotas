@@ -24,7 +24,6 @@
       <br>
 
       <center>
-        <div class="content-output"></div>
         <textarea style="resize: none;width:80%;height:80%" class="content-input" id="content" placeholder="Poneros a trabajar de una vez, hombre"></textarea>
       </center>
 
@@ -36,21 +35,8 @@
 
       <br>
     </div>
-    <script>
 
-      var output_div = document.querySelector('.content-output');
-      var textarea = document.querySelector('#content');
-
-      textarea.addEventListener('input', updateOutput);
-
-      textarea.textContent = localStorage.getItem('content');
-
-      function updateOutput() {
-        localStorage.setItem('content', textarea.value);
-
-      }
-
-    </script>
+    <script type="module" src="src/index.js"></script>
 
   </body>
   </html>
