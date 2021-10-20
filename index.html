@@ -22,7 +22,8 @@ AL BLOC DE NOTAS!!!</marquee>
 <br>
 
 <center>
-<textarea style="width:80%;height:80%" placeholder="Poneros a trabajar de una vez hombre"></textarea>
+<div class="content-output"></div>
+<textarea class="content-input" id="content" style="width:80%;height:80%" placeholder="Poneros a trabajar de una vez hombre"></textarea>
 </center>
 
 <br>
@@ -32,6 +33,22 @@ AL BLOC DE NOTAS!!!</marquee>
 <br>
 
 <br>
+
+<script>
+
+  var output_div = document.querySelector('.content-output');
+  var textarea = document.querySelector('#content');
+
+  textarea.addEventListener('input', updateOutput);
+
+  textarea.textContent = localStorage.getItem('content');
+
+  function updateOutput() {
+    localStorage.setItem('content', textarea.value);
+    
+    }
+
+</script>
 
 </body>
 </html>
