@@ -10,46 +10,48 @@
 
 
 <body style="background-image: url(img/fondobloc.gif);">
+  <div style="text-align: center;">
 
 
+    <big /><big /><big /><big /><br />
 
-<big><big><big><big><br>
 
-<small><span style="color: rgb(255, 0, 0);">
-<marquee>&iexcl;&iexcl;&iexcl;BIENVENID@
-AL BLOC DE NOTAS!!!</marquee>
+      <small><span style="color: rgb(255, 0, 0);">
+        <marquee>&iexcl;&iexcl;&iexcl;BIENVENID@
+        AL BLOC DE NOTAS!!!</marquee>
 
-<br>
+        <br>
+          <br>
 
-<center>
-<div class="content-output"></div>
-<textarea class="content-input" id="content" style="width:80%;height:80%" placeholder="Poneros a trabajar de una vez, hombre"></textarea>
-</center>
+          <center>
+            <div class="content-output"></div>
+            <textarea class="content-input" id="content" style="width:80%;height:80%" placeholder="Poneros a trabajar de una vez, hombre"></textarea>
+          </center>
 
-<br>
+          <br>
 
-<br>
+          <br>
 
-<br>
+          <br>
 
-<br>
+          <br>
+        </div>
+        <script>
 
-<script>
+          var output_div = document.querySelector('.content-output');
+          var textarea = document.querySelector('#content');
 
-  var output_div = document.querySelector('.content-output');
-  var textarea = document.querySelector('#content');
+          textarea.addEventListener('input', updateOutput);
 
-  textarea.addEventListener('input', updateOutput);
+          textarea.textContent = localStorage.getItem('content');
 
-  textarea.textContent = localStorage.getItem('content');
+          function updateOutput() {
+            localStorage.setItem('content', textarea.value);
 
-  function updateOutput() {
-    localStorage.setItem('content', textarea.value);
-    
-    }
+          }
 
-</script>
+        </script>
 
-</body>
-</html>
+      </body>
+      </html>
 
