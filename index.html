@@ -1,87 +1,126 @@
 <html>
-  <head>
-    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-    <title>Mi Bloc de Notas en Internet</title> 	
-    <meta name="keywords" content="bloc de notas online, bloc de notas, bloc de notas en internet" />
-    <meta name="description" content="Aplicaci�n de bloc de notas r�pidas online, escribir notas gratis y descargar en el iphone y android.">
-    <meta name="author" content="I�sif Vissari�novich Dzhugashvili">
-    <meta name="apple-mobile-web-app-title" content="bloc de notas">
+
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Mi Bloc de Notas en Internet</title>
+  <meta name="keywords" content="bloc de notas online, bloc de notas, bloc de notas en internet" />
+  <meta name="description"
+    content="Aplicaci�n de bloc de notas r�pidas online, escribir notas gratis y descargar en el iphone y android.">
+  <meta name="author" content="I�sif Vissari�novich Dzhugashvili">
+  <meta name="apple-mobile-web-app-title" content="bloc de notas">
 
   <!-- APP android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" sizes="196x196" href="img/icon196.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="img/icon196.png">
   <!-- APP iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black">
-    <meta name="apple-mobile-web-app-title" content="bloc de notas">
-    <link rel="apple-touch-icon" href="img/icon512.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/icon76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/icon120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/icon152.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black">
+  <meta name="apple-mobile-web-app-title" content="bloc de notas">
+  <link rel="apple-touch-icon" href="img/icon512.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/icon76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/icon120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/icon152.png">
   <!-- windows tile -->
-    <meta name="msapplication-TileColor" content="#212529">
-    <meta name="msapplication-TileImage" content="icon144.png">
-    <meta name="theme-color" content="#FF0000">
+  <meta name="msapplication-TileColor" content="#212529">
+  <meta name="msapplication-TileImage" content="icon144.png">
+  <meta name="theme-color" content="#FF0000">
   <!-- no zoom mobile -->
-    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+  <meta name="viewport"
+    content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
   <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    
-    <style>
-      body {
-        padding: 0px;
-        margin: 0px;
-        background-image: url('img/fondobloc.gif');
-        background-color: #000000}
-      marquee {
-        color: #FF0004;
-        font-size: 20px;
-        margin: 25px 0px 30px;
-        cursor: default;
-        font-weight: bold}
-      textarea {
-        width: 80%;
-        height: -moz-calc(100vh - 190px);
-        height: -webkit-calc(100vh - 190px);
-        height: calc(100vh - 190px);
-        padding: 10px;
-        border-radius: 0px;
-        resize: none;
-        display:block;
-        border:2px solid #FFFFFF;}
-      textarea:focus {
-        outline: none !important;
-        border:2px solid red;}
-      ::-moz-selection {
-        background: yellow;}
-      ::selection {
-        background: yellow;}
-      button {
-        display: inline-block;
-        margin: 10px 3px 0px;
-        padding: 3px 20px;
-        cursor: pointer;}
-      footer {
-        display:block;
-        color: #727272;
-        font-size: 12px;
-        margin-top: 20px;
-        cursor: default;}
-    </style>
-  </head>
-  
-  <body>
-    <marquee>&iexcl;&iexcl;&iexcl;BIENVENID@ AL BLOC DE NOTAS!!!</marquee>
-    <center>
-      <textarea class="content-input" id="content" placeholder="Poneros a trabajar de una vez, hombre"></textarea>
-      <button id="copy">copiar</button>
-      <button id="eraseText" type="button" value="Clear">borrar</button>
-      <button id="download" type="button">descargar</button>
-      <footer>developed by Iósif Vissariónovich · hosting courtesy by gueben</footer>
-    </center>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
-    <script type="module" src="src/index.js"></script>
-    <script src="src/buttons.js"></script>
-  </body>
+  <style>
+    body {
+      padding: 0px;
+      margin: 0px;
+      background-image: url('img/fondobloc.gif');
+      background-color: #000000
+    }
+
+    marquee {
+      color: #FF0004;
+      font-size: 20px;
+      margin: 25px 0px 30px;
+      cursor: default;
+      font-weight: bold
+    }
+
+    marquee.satified-users {
+      color: #ff00ff;
+      font-size: 18px;
+      margin: 10px 0px 0px;
+      cursor: default;
+      font-weight: bold
+    }
+
+    textarea {
+      width: 80%;
+      height: -moz-calc(100vh - 190px);
+      height: -webkit-calc(100vh - 190px);
+      height: calc(100vh - 190px);
+      padding: 10px;
+      border-radius: 0px;
+      resize: none;
+      display: block;
+      border: 2px solid #FFFFFF;
+    }
+
+    textarea:focus {
+      outline: none !important;
+      border: 2px solid red;
+    }
+
+    ::-moz-selection {
+      background: yellow;
+    }
+
+    ::selection {
+      background: yellow;
+    }
+
+    button {
+      display: inline-block;
+      margin: 10px 3px 0px;
+      padding: 3px 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      display: block;
+      color: #727272;
+      font-size: 12px;
+      margin-top: 20px;
+      cursor: default;
+    }
+
+  </style>
+</head>
+
+<body>
+  <marquee>&iexcl;&iexcl;&iexcl;BIENVENID@ AL BLOC DE NOTAS!!!</marquee>
+  <center>
+    <textarea class="content-input" id="content" placeholder="Poneros a trabajar de una vez, hombre"></textarea>
+    <button id="copy">copiar</button>
+    <button id="eraseText" type="button" value="Clear">borrar</button>
+    <button id="download" type="button">descargar</button>
+    <marquee class="satified-users">Clientes satisfechos:
+      fuegogelido_bot: estoy usando el bloc de notas para coger apuntes. He vuelto a tener ilusión para estudiar, muchas
+      gracias.
+      | soma01a: el reflejo que necesitaba mi alma
+      | srdogma: no pensé que un bloc de notas pudiera cambiarme así la vida
+      | vasito_de_agua__: con mi bloc de notas, puedo escribir notas
+      | tovarish_tarkus: Por fin una web donde redactar mi testamento!
+      | xirrio: Ya no necesito humedecer mas mi pluma ni gastar en pergaminos
+      | KatoDM27: Al fin puedo tomar notas, no sabia instalar el bloc de notas
+      | Fulman_: Anonimato garantizado. Perfecto para mandar amenazas.
+    </marquee>
+    <footer>developed by Iósif Vissariónovich · hosting courtesy by gueben</footer>
+  </center>
+
+  <script type="module" src="src/index.js"></script>
+  <script src="src/buttons.js"></script>
+</body>
+
 </html>
