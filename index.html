@@ -1,43 +1,87 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>Mi Bloc de Notas en Internet</title> 	
+    <meta name="keywords" content="bloc de notas online, bloc de notas, bloc de notas en internet" />
+    <meta name="description" content="Aplicaci�n de bloc de notas r�pidas online, escribir notas gratis y descargar en el iphone y android.">
+    <meta name="author" content="I�sif Vissari�novich Dzhugashvili">
+    <meta name="apple-mobile-web-app-title" content="bloc de notas">
 
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <title>Bloc de notas</title>
-
-
-</head>
-
-
-<body style="background-image: url(img/fondobloc.gif);">
-  <div style="text-align: center;">
-
-
-    <big /><big /><big /><big /><br />
-
-
-    <small><span style="color: rgb(255, 0, 0);">
-      <marquee>&iexcl;&iexcl;&iexcl;BIENVENID@
-      AL BLOC DE NOTAS!!!</marquee>
-
-      <br>
-      <br>
-
-      <center>
-        <textarea style="resize: none;width:80%;height:80%" class="content-input" id="content" placeholder="Poneros a trabajar de una vez, hombre"></textarea>
-      </center>
-
-      <br>
-
-      <br>
-
-      <br>
-
-      <br>
-    </div>
+  <!-- APP android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="196x196" href="img/icon196.png">
+  <!-- APP iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black">
+    <meta name="apple-mobile-web-app-title" content="bloc de notas">
+    <link rel="apple-touch-icon" href="img/icon512.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/icon76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/icon120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icon152.png">
+  <!-- windows tile -->
+    <meta name="msapplication-TileColor" content="#212529">
+    <meta name="msapplication-TileImage" content="icon144.png">
+    <meta name="theme-color" content="#FF0000">
+  <!-- no zoom mobile -->
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+  <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+        background-image: url('img/fondobloc.gif');
+        background-color: #000000}
+      marquee {
+        color: #FF0004;
+        font-size: 20px;
+        margin: 25px 0px 30px;
+        cursor: default;
+        font-weight: bold}
+      textarea {
+        width: 80%;
+        height: -moz-calc(100vh - 190px);
+        height: -webkit-calc(100vh - 190px);
+        height: calc(100vh - 190px);
+        padding: 10px;
+        border-radius: 0px;
+        resize: none;
+        display:block;
+        border:2px solid #FFFFFF;}
+      textarea:focus {
+        outline: none !important;
+        border:2px solid red;}
+      ::-moz-selection {
+        background: yellow;}
+      ::selection {
+        background: yellow;}
+      button {
+        display: inline-block;
+        margin: 10px 3px 0px;
+        padding: 3px 20px;
+        cursor: pointer;}
+      footer {
+        display:block;
+        color: #727272;
+        font-size: 12px;
+        margin-top: 20px;
+        cursor: default;}
+    </style>
+  </head>
+  
+  <body>
+    <marquee>&iexcl;&iexcl;&iexcl;BIENVENID@ AL BLOC DE NOTAS!!!</marquee>
+    <center>
+      <textarea class="content-input" id="content" placeholder="Poneros a trabajar de una vez, hombre"></textarea>
+      <button id="copy">copiar</button>
+      <button id="eraseText" type="button" value="Clear">borrar</button>
+      <button id="download" type="button">descargar</button>
+      <footer>developed by Iósif Vissariónovich · hosting courtesy by gueben</footer>
+    </center>
 
     <script type="module" src="src/index.js"></script>
-
+    <script src="src/buttons.js"></script>
   </body>
-  </html>
-
+</html>
