@@ -27,7 +27,7 @@
   <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    
+
     <style>
       body {
         padding: 0px;
@@ -38,6 +38,12 @@
         color: #FF0004;
         font-size: 20px;
         margin: 25px 0px 30px;
+        cursor: default;
+        font-weight: bold}
+      marquee.satified-users {
+        color: #ff00ff;
+        font-size: 18px;
+        margin: 10px 0px 0px;
         cursor: default;
         font-weight: bold}
       textarea {
@@ -70,7 +76,7 @@
         cursor: default;}
     </style>
   </head>
-  
+
   <body>
     <marquee>&iexcl;&iexcl;&iexcl;BIENVENID@ AL BLOC DE NOTAS!!!</marquee>
     <center>
@@ -78,10 +84,22 @@
       <button id="copy">copiar</button>
       <button id="eraseText" type="button" value="Clear">borrar</button>
       <button id="download" type="button">descargar</button>
-      <footer>developed by Iósif Vissariónovich · hosting courtesy by gueben</footer>
-    </center>
+        <marquee class="satified-users">Clientes satisfechos:
+          fuegogelido_bot: estoy usando el bloc de notas para coger apuntes. He vuelto a tener ilusión para estudiar,
+          muchas gracias.
+          | soma01a: el reflejo que necesitaba mi alma
+          | srdogma: no pensé que un bloc de notas pudiera cambiarme así la vida
+          | vasito_de_agua__: con mi bloc de notas, puedo escribir notas
+          | tovarish_tarkus: Por fin una web donde redactar mi testamento!
+          | xirrio: Ya no necesito humedecer mas mi pluma ni gastar en pergaminos
+          | KatoDM27: Al fin puedo tomar notas, no sabia instalar el bloc de notas
+          | Fulman_: Anonimato garantizado. Perfecto para mandar amenazas.
+        </marquee>
+        <footer>developed by Iósif Vissariónovich · hosting courtesy by gueben</footer>
+      </center>
 
-    <script type="module" src="src/index.js"></script>
-    <script src="src/buttons.js"></script>
-  </body>
+        <script type="module" src="src/index.js"></script>
+        <script src="src/buttons.js"></script>
+    </body>
+
 </html>
