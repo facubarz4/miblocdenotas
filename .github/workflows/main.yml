@@ -5,6 +5,7 @@ on:
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
+    if: github.repository == 'facubarz4/miblocdenotas'
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
