@@ -1,7 +1,7 @@
 on:
   push:
     branches:    
-      - master
+      - main
 
 name: Mi Bloc de Notas CI
 jobs:
