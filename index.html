@@ -48,14 +48,16 @@
         font-weight: bold}
       textarea {
         width: 80%;
-        height: -moz-calc(100vh - 190px);
-        height: -webkit-calc(100vh - 190px);
-        height: calc(100vh - 190px);
+        height: -moz-calc(100vh - 238px);
+        height: -webkit-calc(100vh - 238px);
+        height: calc(100vh - 238px);
         padding: 10px;
         border-radius: 0px;
         resize: none;
         display:block;
-        border:2px solid #FFFFFF;}
+        border:2px solid #FFFFFF;
+        font-family: Arial, Helvetica, sans-serif;
+      }
       textarea:focus {
         outline: none !important;
         border:2px solid red;}
@@ -67,19 +69,55 @@
         display: inline-block;
         margin: 10px 3px 0px;
         padding: 3px 20px;
-        cursor: pointer;}
+        cursor: pointer;
+      }
+      button.active {
+        filter: invert(75%);
+      }
       footer {
         display:block;
         color: #727272;
         font-size: 12px;
         margin-top: 20px;
-        cursor: default;}
+        cursor: default;
+      }
+      .toolbar {
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .field {
+        margin:0;
+        height: 2rem;
+        margin-right: 1rem;
+      }
     </style>
   </head>
 
   <body>
     <marquee>&iexcl;&iexcl;&iexcl;BIENVENID@ AL BLOC DE NOTAS!!!!</marquee>
     <center>
+      <div class="toolbar">
+        <button class="field" id="bold">Negrita</button>
+        <button class="field" id="italic">Cursiva</button>
+        <select class="field" name="font-family" autocomplete="off">
+          <option selected value="Arial">Arial</option>
+          <option value="'Comic Sans MS', 'Comic Sans'">Comic Sans</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Courier">Courier</option>
+        </select>
+        <select class="field" name="font-size" autocomplete="off">
+          <option selected value="16">16</option>
+          <option value="20">20</option>
+          <option value="24">24</option>
+          <option value="28">28</option>
+          <option value="32">32</option>
+          <option value="36">36</option>
+        </select>
+        <input class="field" type="color" name="color" autocomplete="off">
+      </div>
       <textarea class="content-input" id="content" placeholder="Poneros a trabajar de una vez, hombre"></textarea>
       <button id="copy">copiar</button>
       <button id="eraseText" type="button" value="Clear">borrar</button>
@@ -100,6 +138,7 @@
 
         <script type="module" src="src/index.js"></script>
         <script src="src/buttons.js"></script>
+        <script src="src/toolbar.js"></script>
     </body>
 
 </html>
